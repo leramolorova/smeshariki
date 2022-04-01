@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.back{
+			background-size: cover;
+		}
+		.button{
+			margin-left: 710px;
+		}
+		.box{
+			height: 200px;
+			width: 250px;
+		}
+		.box1{
+			height: 200px;
+			width: 250px;
+			background: red;
+			position: absolute;
+			margin-left: 300px;
+			margin-top: 100px;
+			transition: 0.5s;
+			background-size: 100% 100%;
+		}
+		.box2{
+			height: 200px;
+			width: 250px;
+			background: red;
+			position: absolute;
+			margin-left: 600px;
+			margin-top: 100px;
+			transition: 0.5s;
+			background-size: 100% 100%;
+		}
+		.box3{
+			height: 200px;
+			width: 250px;
+			background: red;
+			position: absolute;
+			margin-left: 900px;
+			margin-top: 100px;
+			transition: 0.5s;
+			background-size: 100% 100%;
+		}
+		.box4{
+			height: 200px;
+			width: 250px;
+			background: blueviolet;
+			position: absolute;
+			margin-left: 300px;
+			margin-top: 370px;
+			transition: 0.5s;
+			background-size: 100% 100%;
+		}
+		.box5{
+			height: 200px;
+			width: 250px;
+			background: blueviolet;
+			position: absolute;
+			margin-left: 600px;
+			margin-top: 370px;
+			transition: 0.5s;
+			background-size: 100% 100%;
+		}
+		.box6{
+			height: 200px;
+			width: 250px;
+			background: blueviolet;
+			position: absolute;
+			margin-left: 900px;
+			margin-top: 370px;
+			transition: 0.5s;
+			background-size: 100% 100%;
+		}
+
+	</style>
+</head>
+<body class="back" style="background-image: url(back.png);">
+
+<h1 style="text-align: center;">попытки: <span class="tries">3</span></h1>
+<button class="button">перемешать</button>
+<div class="box1" style="background-image: url(hedgehog.jpg);">
+</div>
+<div class="box2" style="background-image: url(owl.jpg);"></div>
+<div class="box3" style="background-image: url(rab.jpg);"></div>
+
+<div class="box4" style="background-image: url(crow.jpg);"></div>
+<div class="box5" style="background-image: url(elk.png);"></div>
+<div class="box6" style="background-image: url(bear.jpg);"></div>
+
+
+
+<script type="text/javascript">
+	let attempts = 3;
+
+	document.querySelector('.button').onclick = function(){
+		alert("найди копатыча");
+		document.querySelector('.box1').style.marginTop = "370px";
+		document.querySelector('.box1').style.marginLeft = "600px";
+		document.querySelector('.box1').style.backgroundImage = "url(black.jpg)";
+
+
+		document.querySelector('.box2').style.marginLeft = "300px";
+		document.querySelector('.box2').style.backgroundImage = "url(black.jpg)";
+
+
+		document.querySelector('.box3').style.marginTop = "370px";
+		document.querySelector('.box3').style.marginLeft = "300px";
+		document.querySelector('.box3').style.backgroundImage = "url(black.jpg)";
+
+
+		document.querySelector('.box4').style.marginTop = "100px";
+		document.querySelector('.box4').style.marginLeft = "900px";
+		document.querySelector('.box4').style.backgroundImage = "url(black.jpg)";
+
+		document.querySelector('.box5').style.marginLeft = "900px";
+		document.querySelector('.box5').style.backgroundImage = "url(black.jpg)";
+
+
+		document.querySelector('.box6').style.marginTop = "100px";
+		document.querySelector('.box6').style.marginLeft = "600px";
+		document.querySelector('.box6').style.backgroundImage = "url(black.jpg)";
+		
+	}
+
+	document.querySelector('.box1').onclick = function(){
+		attempts = attempts-1;
+		if(attempts==0){
+			alert("ты проиграл!");
+		}
+		document.querySelector('.tries').innerHTML = attempts;
+		document.querySelector('.box1').style.backgroundImage = "url(hedgehog.jpg)";
+	}
+
+	document.querySelector('.box2').onclick = function(){
+		attempts = attempts-1;
+		if(attempts==0){
+			alert("ты проиграл!");
+		}
+		document.querySelector('.tries').innerHTML = attempts;
+		document.querySelector('.box2').style.backgroundImage = "url(owl.jpg)";
+	}
+
+	document.querySelector('.box3').onclick = function(){
+		attempts = attempts-1;
+		if(attempts==0){
+			alert("ты проиграл!");
+		}
+		document.querySelector('.tries').innerHTML = attempts;
+		document.querySelector('.box3').style.backgroundImage = "url(rab.jpg)";
+	}
+
+	document.querySelector('.box4').onclick = function(){
+		attempts = attempts-1;
+		if(attempts==0){
+			alert("ты проиграл!");
+		}
+		document.querySelector('.tries').innerHTML = attempts;
+		document.querySelector('.box4').style.backgroundImage = "url(crow.jpg)";
+	}
+
+	document.querySelector('.box5').onclick = function(){
+		attempts = attempts-1;
+		if(attempts==0){
+			alert("ты проиграл!");
+		}
+		document.querySelector('.tries').innerHTML = attempts;
+		document.querySelector('.box5').style.backgroundImage = "url(elk.png)";
+	}
+
+
+	document.querySelector('.box6').onclick = function(){
+		alert("поздравляю! это копатыч");
+		document.querySelector('.box6').style.backgroundImage = "url(bear.jpg)";
+	}
+</script>
+</body>
+</html>
